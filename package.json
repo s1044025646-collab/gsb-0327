@@ -1,0 +1,20 @@
+{
+  "name": "isotonic-pava-backend",
+  "version": "1.0.0",
+  "description": "加权保序回归（PAVA 相邻块合并）本地后端：TypeScript + Node.js + SQLite",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/pava.test.js dist/test/db.test.js dist/test/api.test.js",
+    "start": "node --no-warnings dist/src/cli.js serve",
+    "demo": "npm run build && node --no-warnings dist/src/demo.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.6.0"
+  }
+}
